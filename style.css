@@ -163,12 +163,15 @@ span{
     width: 800px;
 }
 
+
+
 .home-img img{
-    position: relative;
+    /* position: relative; */
     width: 100%;
-    border-radius: 50%;
-    box-shadow: 0 0 25px var(--main-color);
-    cursor: pointer;  
+    border-radius: 80%;
+    box-shadow: 0 0 50px var(--main-color);
+    cursor: pointer;
+
 }
 
 .home-img img:hover{
@@ -178,8 +181,7 @@ span{
 
 .home-content p{
     font-size: 1.8rem;
-    font-weight: 300;
-    padding-left: -1000px;
+    font-weight: 250;
 }
 
 .social-icon a{
@@ -200,7 +202,7 @@ span{
 
 .social-icon a:hover{
    color: black;
-   transform: scale(1.3)translateY(-5px);
+   transform: scale(1)translateY(-5px);
    background: var(--main-color);
    box-shadow: 0 0 25px var(--main-color);
 }
@@ -219,10 +221,15 @@ span{
 }
 
 .btn:hover{ 
-    transform: scale(1.03);
+    /* transform: scale(1.03);
     background-color: var(--main-color);
     color: black;
-    box-shadow: 0 0 25px var (--main-color);
+    box-shadow: 0 0 25px var (--main-color); */
+
+    color: black;
+    transform: scale(1.3)translateY(-3px);
+    background: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
 }
 
 .Typing-Text{
@@ -259,16 +266,16 @@ span{
 }
 
 @keyframes words{
-    0%, 20%{
+    0%, 25%{
         content: 'Quality Assurance Engineer';
     }
-    21%, 40%{
+    26%, 50%{
         content: 'Associate Software Engineer';
     }
-    41%, 60%{
+    51%, 75%{
         content: 'Manual Tester';
     }
-    61%, 80%{
+    76%, 100%{
         content: 'Automation Tester';
     }
 }
@@ -294,11 +301,6 @@ span{
     padding-top: 106px;
 }
 
-/*Experiences Tab*/
-.Experiences{
-    padding-top: 106px;
-}
-
 /*Experience Tab*/
 @media(max-width:1000px){
     .home{
@@ -311,21 +313,96 @@ span{
         flex-direction: column;
         margin: 5rem 4rem;
     }
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+    .home-content h1{
+        font-size: 5rem;
+    }
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
 }
 
-.home .home-content h3{
-    font-size: 2.5rem;
+.Experiences{
+    background: var(--second-bg-color);
+    padding: 106px;
+    display: flex;
+    flex-direction: column;
 }
 
-.home-content h1{
-    font-size: 5rem;
+.Exp-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
 }
 
-.home-img{
-    margin-top: 4rem;
-    border-radius: 50%;
-    width: 800px;
+.ExpBox{
+    background-color: var(--main-color);
+    height: 300ox;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.3 ease;
+    
 }
+
+.ExpBox:hover{
+    background: transparent;
+    color: var(--text-color);
+    /* transform: scale(1.03); */
+    border: 3px solid var(--main-color);
+    /* margin-bottom: 10px; */
+}
+
+.ExpBox .ExpInfo{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-height: 350px;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    margin-bottom: 10px;
+}
+
+.ExpInfo h4{
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.ExpInfo h5{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.ExpInfo p{
+    font-size: 1.6rem;
+    font-weight: 400;
+    max-height: 100px;
+    text-align: left;
+}
+
+.ExpInfo b{
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding-top: 20px;
+}
+
+.Experiences h2{
+    padding-bottom: 3rem;
+}
+
+/*Skill*/
+.Skills{
+    background: var(--second-bg-color);
+    padding: 106px;
+    display: flex;
+    flex-direction: column;
+}
+
 
 /*Contacts*/
 .Contacts{
