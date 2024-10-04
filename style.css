@@ -198,6 +198,7 @@ span{
     color: var(--main-color); 
     margin: 3rem 1.5rem 3rem 0;
     transition: 0.3s ease;
+    
 }
 
 .social-icon a:hover{
