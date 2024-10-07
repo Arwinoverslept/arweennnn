@@ -33,6 +33,8 @@ html::-webkit-scrollbar{
     width: 0.8rem;
 }
 
+h
+
 html::-webkit-scrollbar-track{
     background: var(--bg-color);
 }
@@ -47,7 +49,7 @@ html::-webkit-scrollbar-thumb{
     left: 0;
     width: 100%;
     padding: 3rem 9%;
-    background: black;
+    background:rgba(0,0,0,0.7);
     filter: drop-shadow(10px);
     display: flex;
     justify-content: space-between;
@@ -297,6 +299,11 @@ span{
     padding-top: 106px;
 }
 
+.Education .h2{
+    text-align: center;
+}
+
+
 /*Experience Tab*/
 @media(max-width:1000px){
     .home{
@@ -466,7 +473,7 @@ span{
 }
 
 
-/*Contacts*/
+/*Educaiton*/
 .Education{
     background: var(--second-bg-color);
 }
@@ -476,13 +483,14 @@ span{
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
+    
 }
 
 .Education .timeline::after{
     content: '';
     position: absolute;
     width: 6px;
-    background-color: rgb(90 , 64, 64);
+    background-color: rgb(49, 70, 78);
     top: 0;
     bottom: 0;
     left: 50%;
@@ -561,19 +569,19 @@ span{
 }
 
 .Education .content .tag{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding-top: 1.5rem;
     padding-left: 1.5rem;
 }
 
 .Education .content .desc{
-    margin-left: 1.5rem;
+    margin-left: 1rem;
     padding-bottom: 1rem;
 }
 
-.Education .content .desc h2{
+.Education .content .tag h2{
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color: #000000;
 }
 
@@ -624,5 +632,127 @@ span{
 /*Contacts*/
 .Contacts{
     padding: 106px;
-  
+    margin: 3rem;
+    color: white;
+}
+
+.Contacts form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.Contacts form .input-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Contacts form .input-box input,
+.Contacts form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    border-radius: 0.8rem;
+    border: 2px solid var(--main-color);
+    margin: 1rem 0;
+    resize: none;
+}
+
+.Contacts form .btn{
+    margin-top: 2rem;
+}
+
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: var(--main-color);
+}
+
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: black;
+}
+
+.footer .social a{
+    font-size: 25px;
+    color: black;
+    border: 2px solid black;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3 ease;
+}
+
+.footer .social a:hover{
+    transform: scale(1.2)translateY(-5px);
+    background: black;
+    color: var(--main-color);
+}
+
+.footer ul li a{
+    color: black;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+.footer ul li a:hover{
+    border-bottom: 3px solid transparent;
+}
+
+.footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer .Copyright{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+}
+
+@media(max-width:1285px) {
+    html{
+        font-size: 55%;
+    }
+    .Exp-container{
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(2,1fr);
+        margin: 0 5rem;
+    }
+}
+
+@media(max-width: 991px){
+    .header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .Experiences{
+        padding-bottom: 7rem;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 895) {
+    .Experiences h2{
+        margin-bottom: 3rem;
+    }
+    .Exp-container{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
