@@ -1,8 +1,8 @@
 <h1 align="center">Hi 👋, I'm Arwinoverslept</h1>
 <h3 align="center">A Quality Assurance Engineer eager to learn both Front-end and Back-end development.</h3>
 
-<p align="center">
-    <img src="[X](https://c.tenor.com/uYP_Nkq8VPsAAAAC/tenor.gif)"></img>
+<p align="right">
+    <img alt= "Coding" src="https://c.tenor.com/uYP_Nkq8VPsAAAAC/tenor.gif" width="500" > </img>
 </p>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=arwinoverslept&label=Profile%20views&color=0e75b6&style=flat" alt="arwinoverslept" /> </p>
