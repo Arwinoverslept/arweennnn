@@ -121,11 +121,12 @@ html::-webkit-scrollbar-thumb{
         border-radius: 0.5rem;
         border-bottom: 0.5rem solid var(--main-color);
     }
+
 }
+
 section{
     min-height: 100vh;
     padding: 5rem 9% 5rem;
-
 }
 
 .home{
@@ -137,10 +138,11 @@ section{
     background: var(--bg-color);
 }
 
-.home.home-content{
+.home .home-content{
     font-size: 6rem;
     font-weight: 7000;
     line-height: 1.3;
+    
 }
 
 span{
@@ -166,14 +168,12 @@ span{
 }
 
 
-
 .home-img img{
     /* position: relative; */
     width: 100%;
     border-radius: 80%;
     box-shadow: 0 0 50px var(--main-color);
     cursor: pointer;
-
 }
 
 .home-img img:hover{
@@ -201,6 +201,15 @@ span{
     margin: 3rem 1.5rem 3rem 0;
     transition: 0.3s ease;
     
+}
+
+.Experiences h2,
+.Education h2,
+.skills h2,
+.Contacts h2
+{
+    text-align: center;
+    font-size: 112px;
 }
 
 .social-icon a:hover{
@@ -350,11 +359,13 @@ span{
 
 
 .Experiences{
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     padding: 106px;
     display: flex;
     flex-direction: column;
 }
+
+
 
 .Exp-container{
     display: flex;
@@ -365,7 +376,7 @@ span{
 
 .ExpBox{
     background-color: var(--main-color);
-    height: 300ox;
+    height: 300px;
     border-radius: 3rem;
     cursor: pointer;
     transition: 0.3 ease;
@@ -496,6 +507,7 @@ span{
     left: 50%;
     margin-left: -3px;
     z-index: -2px;
+    
 }
 
 .Education .container{
@@ -504,7 +516,7 @@ span{
     background-color: inherit;
     width: 50%;
 }
-
+/* dito ka mag edit bobo */
 .Education .container::after{
     content: '';
     position: absolute;
@@ -512,16 +524,17 @@ span{
     height: 25px;
     line-height: 25px;
     right: -17px;
-    background-color: rgb(252, 252, 252);
+    background-color: rgb(227, 206, 206);
     border: 4px solid var(--main-color);
     top: 15px;
     border-radius: 50%;
-    z-index: 100;
+    z-index: 2;
     font-size: 1.9rem;
     text-align: center;
     font-weight: 600;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgb(90 , 64, 64);
+    
 }
 
 .Education .left{
@@ -552,7 +565,7 @@ span{
     top: 22px;
     width: 0;
     z-index: 1;
-    right:30px;
+    left: 30px;
     border: medium solid var(--main-color);
     border-width: 10px 10px 10px 0;
     border-color: transparent var(--main-color) transparent transparent ;
@@ -579,7 +592,7 @@ span{
     padding-bottom: 1rem;
 }
 
-.Education .content .tag h2{
+.Education .content .tag h3{
     font-weight: 600;
     font-size: 2.5rem;
     color: #000000;
@@ -634,6 +647,11 @@ span{
     padding: 106px;
     margin: 3rem;
     color: white;
+    
+}
+
+.Contacts .contacts{
+    background: var(--bg-color);
 }
 
 .Contacts form{
@@ -643,11 +661,11 @@ span{
     text-align: center;
 }
 
-.Contacts form .input-box{
+/* .Contacts form .input-box{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-}
+} */
 
 .Contacts form .input-box input,
 .Contacts form textarea{
@@ -662,9 +680,61 @@ span{
     resize: none;
 }
 
-.Contacts form .btn{
+.Contacts form .submit{
     margin-top: 2rem;
 }
+
+.pop{
+   width: 400px;
+   background: whitesmoke;
+   border-radius: 6px;
+   left: 50%;
+   transform: translate(40%, -1000 %) scale(0.1);
+   text-align: center;
+   padding: 0 30px 30px;
+   color: #333; 
+   visibility: hidden;
+   transition: transform 0.4s, top 0.4s;
+}
+
+.open-pop{
+    visibility: visible;
+    top: 50%;
+    transform: translate(40%,-130%) scale(1);
+    display: center;
+   
+  }
+
+.pop img{
+   width: 100px;
+   margin-top: -50px;
+   border-radius: 50%;
+   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+ }
+
+ .pop h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+  }
+
+  .pop button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+ 
+
+
+
 
 .footer{
     position: relative;
@@ -722,14 +792,13 @@ span{
     color: black;
 }
 
-@media(max-width:1285px) {
-    html{
-        font-size: 55%;
+
+/* @media (max-width: 895) {
+    .Experiences h2{
+        margin-bottom: 3rem;
     }
     .Exp-container{
-        padding-bottom: 7rem;
-        grid-template-columns: repeat(2,1fr);
-        margin: 0 5rem;
+        grid-template-columns: repeat(1,1fr);
     }
 }
 
@@ -748,11 +817,119 @@ span{
     }
 }
 
-@media (max-width: 895) {
-    .Experiences h2{
-        margin-bottom: 3rem;
+@media(max-width:1285px) {
+    html{
+        font-size: 55%;
     }
     .Exp-container{
-        grid-template-columns: repeat(1,1fr);
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(2,1fr);
+        margin: 0 5rem;
+    }
+}
+
+
+ */
+
+
+ @media (max-width: 995px) {
+    #MenuIcon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 60%; /* Increased width for better tap target */
+        border-left: 3px solid var(--main-color);
+        border-bottom: 3px solid var(--main-color);
+        border-radius: 0 0 2rem 2rem;
+        padding: 1rem 3%;
+        background-color: var(--second-bg-color);
+        display: none;
+        flex-direction: column;
+    }
+    .navbar.active {
+        display: flex;
+    }
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 1.5rem 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 2rem 5%;
+    }
+    .logo {
+        font-size: 2.5rem;
+    }
+    .navbar a {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 0 5%;
+    }
+    .home-content h1 {
+        font-size: 4.5rem;
+    }
+    .home-content h3 {
+        font-size: 2.2rem;
+    }
+    .home-img {
+        width: 60vw;
+    }
+    .home-img img {
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .Education .timeline::after {
+        left: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .Education .timeline::after {
+        left: 30px;
+    }
+    .Education .container {
+        width: 100%;
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+    }
+    .Education .container.left::before {
+        left: 40px;
+        border-width: 10px 10px 10px 0;
+    }
+    .Education .container.right {
+        left: 0;
+    }
+    .Education .container.right::before {
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent var(--main-color);
+    }
+}
+
+
+@media (max-width: 600px) {
+    .footer {
+        padding: 2rem;
+        text-align: center;
+    }
+    .footer ul li {
+        display: block;
+        padding: 1rem 0;
+    }
+    .footer .Copyright {
+        font-size: 1.4rem;
+        margin-top: 2rem;
     }
 }
