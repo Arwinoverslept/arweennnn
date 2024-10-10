@@ -2,7 +2,7 @@
 <h3 align="center">A Quality Assurance Engineer eager to learn both Front-end and Back-end development.</h3>
 
 <p align="center">
-    <img src="[https://media1.tenor.com/m/uYP_Nkq8VPsAAAAC/coding-hello-world.gif](https://c.tenor.com/uYP_Nkq8VPsAAAAC/tenor.gif)"></img>
+    <img src="[X](https://c.tenor.com/uYP_Nkq8VPsAAAAC/tenor.gif)"></img>
 </p>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=arwinoverslept&label=Profile%20views&color=0e75b6&style=flat" alt="arwinoverslept" /> </p>
