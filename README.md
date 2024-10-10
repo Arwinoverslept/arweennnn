@@ -2,7 +2,7 @@
 <h3 align="center">A Quality Assurance Engineer eager to learn both Front-end and Back-end development.</h3>
 
 <p align="center">
-    <div class="tenor-gif-embed" data-postid="21075258" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/coding-hello-world-c-programming-programming-gif-21075258">Coding Hello World GIF</a>from <a href="https://tenor.com/search/coding-gifs">Coding GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    <img src="https://media1.tenor.com/m/uYP_Nkq8VPsAAAAC/coding-hello-world.gif"></img>
 </p>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=arwinoverslept&label=Profile%20views&color=0e75b6&style=flat" alt="arwinoverslept" /> </p>
