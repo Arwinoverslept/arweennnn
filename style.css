@@ -33,14 +33,27 @@ html::-webkit-scrollbar{
     width: 0.8rem;
 }
 
-h
-
 html::-webkit-scrollbar-track{
     background: var(--bg-color);
 }
 
 html::-webkit-scrollbar-thumb{
     background: var(--main-color);
+}
+
+label #drawer{ 
+    float: right;
+    font-size: 30px;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    color: orange;
+    background: transparent;
+    display: none;
+}
+
+#check{
+    display: none;
 }
 
 .header{
@@ -57,13 +70,15 @@ html::-webkit-scrollbar-thumb{
     z-index: 100;
 }
 
+
+
 .logo{
     font-size: 3rem ;
     color: var(--main-color);
     font-weight: 1000;
     cursor: pointer;
     transition: 0.5 ease;
-    padding-left: 100px;
+    
 }
 
 .logo:hover{
@@ -82,6 +97,7 @@ html::-webkit-scrollbar-thumb{
 .navbar a.active{
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
+    transition: 0.3s;
 }
 
 
@@ -91,38 +107,7 @@ html::-webkit-scrollbar-thumb{
     display: none;
 }
 
-@media (max-width:995px) {
-    #menu-icon{
-        display: block;
-    }
-    .navbar{
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width:40%;
-        border-left: 3px solid var(--main-color);
-        border-bottom: 3px solid var(--main-color);
-        border-bottom-left-radius: 2rem;
-        padding: 1rem 3%;
-        background-color: var(--second-bg-color);
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
-        display: none;
-    }
-    .navbar.active{
-        display:block;
-    }
-    .navbar.a{
-        display:block;
-        font-size: 2rem;
-        margin: 3rem 0;
-    }
-    .navbar.a:hover,.navbar.a.active{
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid var(--main-color);
-    }
 
-}
 
 section{
     min-height: 100vh;
@@ -141,8 +126,7 @@ section{
 .home .home-content{
     font-size: 6rem;
     font-weight: 7000;
-    line-height: 1.3;
-    
+    line-height: 1.3;   
 }
 
 span{
@@ -164,7 +148,7 @@ span{
 
 .home-img{
     border-radius: 50%;
-    width: 800px;
+    width: fixed;
 }
 
 
@@ -314,48 +298,6 @@ span{
 
 
 /*Experience Tab*/
-@media(max-width:1000px){
-    .home{
-        gap: 4rem;
-    }
-}
-
-@media(max-width:995px){
-    .home{
-        flex-direction: column;
-        margin: 5rem 4rem;
-    }
-    .home .home-content h3{
-        font-size: 2.5rem;
-    }
-    .home-content h1{
-        font-size: 5rem;
-    }
-    .home-img img{
-        width: 70vw;
-        margin-top: 4rem;
-    }
-}
-
-
-@media (max-width:991px) {
-    section{
-       padding: 10rem 3% 2rem;
-    }
-    .Experiences{
-        padding-bottom: 7rem;
-    }
-}
-
-
-@media (max-width:895px) {
-    .Experiences h2{
-        margin-bottom: 3rem;
-    }
-    .Exp-container{
-        grid-template-columns: repeat(1,1fr);
-    }
-}
 
 
 .Experiences{
@@ -494,7 +436,6 @@ span{
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
-    
 }
 
 .Education .timeline::after{
@@ -605,43 +546,6 @@ span{
 }
 
 
-@media screen and (max-width:600px){
-    .Education .timeline{
-        margin-top: 2rem;
-    }
-    .Education .timeline::after{
-        left: 31px;
-    }
-
-    .Education .container{
-        width: 100%;
-        padding-left: 8rem;
-        padding-right: 2rem;
-    }
-    
-    .Education .container::after{
-        font-size: 2.2rem;
-    }
-
-    .Education .container::before{
-        left: 61px;
-        border: medium solid var(--main-color);
-        border-width: 10px 10px 10px 0;
-        border-color: transparent var(--main-color) transparent transparent;
-    }
-    .Education .left::after{
-        left: 15px;
-    }
-
-    .Education .right::after{
-        left: 15px;
-    }
-
-    .Education .right{
-        left: 0%;
-    }
-}
-
 /*Contacts*/
 .Contacts{
     padding: 106px;
@@ -689,7 +593,7 @@ span{
    background: whitesmoke;
    border-radius: 6px;
    left: 50%;
-   transform: translate(40%, -1000 %) scale(0.1);
+   transform: translate(40%, -1000%) scale(0.1);
    text-align: center;
    padding: 0 30px 30px;
    color: #333; 
@@ -731,10 +635,6 @@ span{
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   }
- 
-
-
-
 
 .footer{
     position: relative;
@@ -793,143 +693,94 @@ span{
 }
 
 
-/* @media (max-width: 895) {
+
+/* Media Query */
+
+@media screen and (max-width:600px){
+    .Education h2,
+    .Experiences h2,
+    .skills h2,
+    .Contacts h2
+    {
+        font-size: 50px;
+        text-align: center;
+    }
+    
+    .Education .timeline{
+        margin-top: 2rem;
+    }
+
+    .Education .timeline::after{
+        left: 31px;
+    }
+
+    .Education .container{
+        width: 100%;
+        padding-left: 8rem;
+        padding-right: 2rem;
+    }
+    
+    .Education .container::after{
+        font-size: 2.2rem;
+    }
+
+    .Education .container::before{
+        left: 61px;
+        border: medium solid var(--main-color);
+        border-width: 10px 10px 10px 0;
+        border-color: transparent var(--main-color) transparent transparent;
+    }
+    .Education .left::after{
+        left: 15px;
+    }
+
+    .Education .right::after{
+        left: 15px;
+    }
+
+    .Education .right{
+        left: 0%;
+    }
+}
+@media(max-width:1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+    .home-content h1{
+        font-size: 5rem;
+    }
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+
+@media (max-width:991px) {
+    section{
+       padding: 10rem 3% 2rem;
+    }
+    .Experiences{
+        padding-bottom: 7rem;
+    }
+}
+
+
+@media (max-width:895px) {
     .Experiences h2{
         margin-bottom: 3rem;
     }
     .Exp-container{
         grid-template-columns: repeat(1,1fr);
-    }
-}
-
-@media(max-width: 991px){
-    .header{
-        padding: 2rem 3%;
-    }
-    section{
-        padding: 10rem 3% 2rem;
-    }
-    .Experiences{
-        padding-bottom: 7rem;
-    }
-    .footer{
-        padding: 2rem 3%;
-    }
-}
-
-@media(max-width:1285px) {
-    html{
-        font-size: 55%;
-    }
-    .Exp-container{
-        padding-bottom: 7rem;
-        grid-template-columns: repeat(2,1fr);
-        margin: 0 5rem;
-    }
-}
-
-
- */
-
-
- @media (max-width: 995px) {
-    #MenuIcon {
-        display: block;
-    }
-    .navbar {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 60%; /* Increased width for better tap target */
-        border-left: 3px solid var(--main-color);
-        border-bottom: 3px solid var(--main-color);
-        border-radius: 0 0 2rem 2rem;
-        padding: 1rem 3%;
-        background-color: var(--second-bg-color);
-        display: none;
-        flex-direction: column;
-    }
-    .navbar.active {
-        display: flex;
-    }
-    .navbar a {
-        display: block;
-        font-size: 2rem;
-        margin: 1.5rem 0;
-    }
-}
-
-@media (max-width: 600px) {
-    .header {
-        padding: 2rem 5%;
-    }
-    .logo {
-        font-size: 2.5rem;
-    }
-    .navbar a {
-        font-size: 1.6rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .home {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-        padding: 0 5%;
-    }
-    .home-content h1 {
-        font-size: 4.5rem;
-    }
-    .home-content h3 {
-        font-size: 2.2rem;
-    }
-    .home-img {
-        width: 60vw;
-    }
-    .home-img img {
-        width: 100%;
-        margin-top: 2rem;
-    }
-    .Education .timeline::after {
-        left: 20px;
-    }
-}
-
-@media (max-width: 600px) {
-    .Education .timeline::after {
-        left: 30px;
-    }
-    .Education .container {
-        width: 100%;
-        padding: 0 1rem;
-        margin-bottom: 1rem;
-    }
-    .Education .container.left::before {
-        left: 40px;
-        border-width: 10px 10px 10px 0;
-    }
-    .Education .container.right {
-        left: 0;
-    }
-    .Education .container.right::before {
-        border-width: 10px 0 10px 10px;
-        border-color: transparent transparent transparent var(--main-color);
-    }
-}
-
-
-@media (max-width: 600px) {
-    .footer {
-        padding: 2rem;
-        text-align: center;
-    }
-    .footer ul li {
-        display: block;
-        padding: 1rem 0;
-    }
-    .footer .Copyright {
-        font-size: 1.4rem;
-        margin-top: 2rem;
     }
 }

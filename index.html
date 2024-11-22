@@ -13,6 +13,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript"> emailjs.init("2V7UKXvFCgk1dUjHT"); </script>
+    <script>src="https://kit.fontawesome.com/a076d05399.js"</script>
 </head>
 
 <body>
@@ -21,14 +22,20 @@
     <header class="header">
 
         <a href="#" class="logo">@Arwinoverslept</a>
-        <i class="fa-solid fa-bars" class ='MenuIcon'></i>
+        <label for="check">
+            <i class="fas fa-bars" id="drawer"></i>
+        </label>
+        <input type="checkbox" id="check">
+       
         
         <nav class="navbar">
+        
             <a href="#Home" class="href">Home</a>
             <a href="#Education" class="href">Education</a>
             <a href="#Experiences" class="href">Work Experiences</a>
             <a href="#skills" class="href">Skills</a>
             <a href="#contacts" class="href">Contact Me</a>
+
         </nav>
     </header>  
 
@@ -128,7 +135,6 @@
 
                     <p>I developed and executed comprehensive test plans, test cases, and test scripts based on the project requirements. This involved performing manual testing to identify defects and ensure that all aspects of the software met the specified requirements. Additionally, I utilized Selenium for automation testing on selected test scenarios to confirm that the software aligned with the client's needs and discussed the testing outcomes directly with the client. I also documented test scripts, procedures, and results for future reference and knowledge sharing. Furthermore, I created test scenarios and data sets to simulate real-world usage scenarios and edge cases, ensuring thorough validation of the software.</p>
 
-                    <b href="#">Software Used: <i class="fa-brands fa-java"></i></b>
 
                 </div>
             </div>
@@ -141,7 +147,6 @@
                     <h5>We Support Inc. – PSBank</h5>
                     <p>I provided technical assistance and support for incoming queries and issues related to banking transaction problems, 
                         computer systems and software issues. Additionally, I collaborated with other IT team members to resolve complex technical issues and escalated problems when necessary to ensure efficient resolution.</p>
-                    <b href="#">Software Used: <i class="fa-solid fa-database"></i></b>
                     
                 </div>
             </div>
@@ -153,9 +158,7 @@
                     <h4>Quality Assurance Engineer</h4>
                     <h5>Asianlink.ai</h5>
                     <p>I have focused on creating an end-to-end test script for the Asianlink.ai application, ensuring comprehensive functionality and user experience. I also developed detailed bug reports, summarizing the issues encountered during testing, and engaged in discussions with the development team to provide insights on how these bugs were identified and their potential impact. Additionally, I dedicated time to studying HTML, CSS, 
-                        and JavaScript to enhance my web development skills and contribute more effectively to the project.</p>
-                    <b href="#">Software Used: <i class="fa-brands fa-java"></i></b>
-                    
+                        and JavaScript to enhance my web development skills and contribute more effectively to the project.</p>                    
                 </div>
             </div>
         </div>
@@ -238,7 +241,7 @@
                 <input type="number" id="number" name="number" placeholder="Phone Number" required>
                 <input type="text" id="Subject" name="Subject" placeholder="Subject" required>
             </div>
-            <textarea name="message" id="message" placeholder="Enter your message..."></textarea>
+            <textarea name="message" id="message" placeholder="Job Description / Message ..."></textarea>
             <button id="submit" type="submit" value="Send Message" class="btn" onclick="openPopup()">Send Message</button>
             <div class="pop" id="pop">
                 <img src="/potos/404-tick.png">
