@@ -17,26 +17,43 @@
 </head>
 
 <body>
-
-    
     <header class="header">
+        
+        <button id="sidebarToggle" aria-controls="default-sidebar" type="button">
+            <span class="visually-hidden">Toggle sidebar</span>
+            <svg class="icon" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+            </svg>
+         </button>
 
         <a href="#" class="logo">@Arwinoverslept</a>
-        <label for="check">
-            <i class="fas fa-bars" id="drawer"></i>
-        </label>
-        <input type="checkbox" id="check">
+
        
+
+        <div id="sidebar" class="sidebar hidden">
+            <div class="brand">
+                <a href="#" aria-label="Brand">Arwinoverslept</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#Home" class="href">Home</a></li>
+                    <li><a href="#Education" class="href">Education</a></li>
+                    <li><a href="#Experiences" class="href">Work Experiences</a></li>
+                    <li><a href="#skills" class="href">Skills</a></li>
+                    <li><a href="#contacts" class="href">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
         
         <nav class="navbar">
-        
+            
             <a href="#Home" class="href">Home</a>
             <a href="#Education" class="href">Education</a>
             <a href="#Experiences" class="href">Work Experiences</a>
             <a href="#skills" class="href">Skills</a>
             <a href="#contacts" class="href">Contact Me</a>
 
-        </nav>
+        </nav> 
     </header>  
 
     <section class="home" id="Home">
@@ -56,7 +73,7 @@
                     
                 </div>
                
-                <a href="/Files/Viernes-Arwin-CV (2).pdf" class="btn" download="Viernes-Arwin-CV">Download CV</a>
+                <a href="/Files/Arwin-Viernes-CV.pdf" class="btn" download="Viernes-Arwin-CV">Download CV</a>
         </div>
     </section>
 
@@ -293,6 +310,60 @@
         });
     </script>
 
+<script>
+    document.getElementById('sidebarToggle').addEventListener('click', function() {
+        var sidebar = document.getElementById('sidebar');
+        var isHidden = sidebar.classList.contains('hidden');
+        if (isHidden) {
+            sidebar.classList.remove('hidden');
+            sidebar.style.transform = 'translateX(0)';
+        } else {
+            sidebar.classList.add('hidden');
+            sidebar.style.transform = 'translateX(-100%)';
+        }
+    });
+</script>
+
+<script>
+    document.getElementById('toggleButton').addEventListener('click', function() {
+        var sidebar = document.getElementById('sidebar');
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !expanded);
+        sidebar.classList.toggle('hidden');
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleButton = document.getElementById('sidebarToggle');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.createElement('div');
+        overlay.className = 'overlay';
+        document.body.appendChild(overlay);
+    
+        function toggleSidebar() {
+            sidebar.classList.toggle('hidden');
+            overlay.style.display = sidebar.classList.contains('hidden') ? 'none' : 'block';
+        }
+    
+        toggleButton.addEventListener('click', function() {
+            toggleSidebar();
+        });
+    
+        document.addEventListener('click', function(event) {
+            if (!sidebar.contains(event.target) && !toggleButton.contains(event.target) && !overlay.contains(event.target)) {
+                if (!sidebar.classList.contains('hidden')) {
+                    sidebar.classList.add('hidden');
+                    overlay.style.display = 'none';
+                }
+            }
+        });
+    
+        overlay.addEventListener('click', function() {
+            toggleSidebar();
+        });
+    });
+    </script>
 
     <footer class="footer">
         <div class="social">
