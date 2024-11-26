@@ -26,15 +26,18 @@
             </svg>
          </button>
 
-        <a href="#" class="logo">@Arwinoverslept</a>
+        <!-- <a href="#Home" class="logo">@Arwinoverslept</a> -->
 
        
 
         <div id="sidebar" class="sidebar hidden">
+            
+            <button id="Close" class="fa-solid fa-angles-left"></button>
+            
             <div class="brand">
-                <a href="#" aria-label="Brand">Arwinoverslept</a>
+                <a href="#Home" aria-label="Brand">My Portfolio</a>
             </div>
-            <nav>
+            <nav class="sideLabel">
                 <ul>
                     <li><a href="#Home" class="href">Home</a></li>
                     <li><a href="#Education" class="href">Education</a></li>
@@ -142,17 +145,12 @@
 
     <section class="Experiences" id="Experiences">
         <h2 class="heading ">Work <span>Experiences</span></h2>
-
         <div class="Exp-container">
             <div class="ExpBox">
                 <div class="ExpInfo">
                     <h4>Quality Assurance Engineer</h4>
-
                     <h5>Accenture Inc.</h5>
-
                     <p>I developed and executed comprehensive test plans, test cases, and test scripts based on the project requirements. This involved performing manual testing to identify defects and ensure that all aspects of the software met the specified requirements. Additionally, I utilized Selenium for automation testing on selected test scenarios to confirm that the software aligned with the client's needs and discussed the testing outcomes directly with the client. I also documented test scripts, procedures, and results for future reference and knowledge sharing. Furthermore, I created test scenarios and data sets to simulate real-world usage scenarios and edge cases, ensuring thorough validation of the software.</p>
-
-
                 </div>
             </div>
         </div>
@@ -164,7 +162,6 @@
                     <h5>We Support Inc. – PSBank</h5>
                     <p>I provided technical assistance and support for incoming queries and issues related to banking transaction problems, 
                         computer systems and software issues. Additionally, I collaborated with other IT team members to resolve complex technical issues and escalated problems when necessary to ensure efficient resolution.</p>
-                    
                 </div>
             </div>
         </div>
@@ -174,8 +171,7 @@
                 <div class="ExpInfo">
                     <h4>Quality Assurance Engineer</h4>
                     <h5>Asianlink.ai</h5>
-                    <p>I have focused on creating an end-to-end test script for the Asianlink.ai application, ensuring comprehensive functionality and user experience. I also developed detailed bug reports, summarizing the issues encountered during testing, and engaged in discussions with the development team to provide insights on how these bugs were identified and their potential impact. Additionally, I dedicated time to studying HTML, CSS, 
-                        and JavaScript to enhance my web development skills and contribute more effectively to the project.</p>                    
+                    <p>I have focused on creating an end-to-end test script for the Asianlink.ai application, ensuring comprehensive functionality and user experience. I also developed detailed bug reports, summarizing the issues encountered during testing, and engaged in discussions with the development team to provide insights on how these bugs were identified and their potential impact. Additionally, I dedicated time to studying HTML, CSS and JavaScript to enhance my web development skills and contribute more effectively to the project.</p>                    
                 </div>
             </div>
         </div>
@@ -270,6 +266,19 @@
 
     </section>
 
+    
+
+    <footer class="footer">
+        <div class="social">
+            <a href="https://www.linkedin.com/in/arwin-viernes-9a8431230/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/ArwinTheGreatAndPowerful/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/arwinoverslept/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/Arwinoverslept"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <p class="Copyright">Arwin B. Viernes || All Rights Reserved.</p>
+    </footer>
+</body>
+
     <script>
         let Popup = document.getElementById("pop");
         function openPopup(){
@@ -282,100 +291,45 @@
         }   
     </script>
 
+    <script>
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                event.preventDefault(); 
 
+                const serviceID = 'service_i6xlkud';
+                const templateID = 'template_8arq9qi';
+                
+                const templateParams = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    number: document.getElementById('number').value,
+                    Subject: document.getElementById('Subject').value,
+                    message: document.getElementById('message').value,
+                };
+
+                emailjs.send(serviceID, templateID, templateParams)
+                    .then((response) => {
+                        document.getElementById('contactForm').reset();
+                    }, (error) => {
+                        console.log('Failed to send email', error);
+                    });
+            });
+    </script>
 
 
 
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault(); 
-
-            const serviceID = 'service_i6xlkud';
-            const templateID = 'template_8arq9qi';
-            
-            const templateParams = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                number: document.getElementById('number').value,
-                Subject: document.getElementById('Subject').value,
-                message: document.getElementById('message').value,
-            };
-    
-            emailjs.send(serviceID, templateID, templateParams)
-                .then((response) => {
-                    document.getElementById('contactForm').reset();
-                }, (error) => {
-                    console.log('Failed to send email', error);
-                });
-        });
-    </script>
-
-<script>
-    document.getElementById('sidebarToggle').addEventListener('click', function() {
-        var sidebar = document.getElementById('sidebar');
-        var isHidden = sidebar.classList.contains('hidden');
-        if (isHidden) {
-            sidebar.classList.remove('hidden');
-            sidebar.style.transform = 'translateX(0)';
-        } else {
-            sidebar.classList.add('hidden');
-            sidebar.style.transform = 'translateX(-100%)';
-        }
-    });
-</script>
-
-<script>
-    document.getElementById('toggleButton').addEventListener('click', function() {
-        var sidebar = document.getElementById('sidebar');
-        var expanded = this.getAttribute('aria-expanded') === 'true';
-        this.setAttribute('aria-expanded', !expanded);
-        sidebar.classList.toggle('hidden');
-    });
-</script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const toggleButton = document.getElementById('sidebarToggle');
-        const sidebar = document.getElementById('sidebar');
-        const overlay = document.createElement('div');
-        overlay.className = 'overlay';
-        document.body.appendChild(overlay);
-    
-        function toggleSidebar() {
-            sidebar.classList.toggle('hidden');
-            overlay.style.display = sidebar.classList.contains('hidden') ? 'none' : 'block';
-        }
-    
-        toggleButton.addEventListener('click', function() {
-            toggleSidebar();
-        });
-    
-        document.addEventListener('click', function(event) {
-            if (!sidebar.contains(event.target) && !toggleButton.contains(event.target) && !overlay.contains(event.target)) {
-                if (!sidebar.classList.contains('hidden')) {
-                    sidebar.classList.add('hidden');
-                    overlay.style.display = 'none';
-                }
-            }
-        });
-    
-        overlay.addEventListener('click', function() {
-            toggleSidebar();
-        });
+    document.getElementById('Close').addEventListener('click', function(){
+        sidebar.style.transform = 'translateX(-100%)';
     });
     </script>
 
-    <footer class="footer">
-        <div class="social">
-            <a href="https://www.linkedin.com/in/arwin-viernes-9a8431230/"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://www.facebook.com/ArwinTheGreatAndPowerful/"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/arwinoverslept/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://github.com/Arwinoverslept"><i class="fa-brands fa-github"></i></a>
-        </div>
-        <p class="Copyright">Arwin B. Viernes || All Rights Reserved.</p>
-    </footer>
+    <script>
+    document.getElementById('sidebarToggle').addEventListener('click', function(){
+        sidebar.style.transform = 'translateX(0%)';
+    });
+    </script>
 
 
 
-</body>
+
 </html>
