@@ -50,7 +50,7 @@
         
         <nav class="navbar">
             
-            <a href="#Home" class="href">Home</a>
+            <a href="#Home" class="href" >Home</a>
             <a href="#Education" class="href">Education</a>
             <a href="#Experiences" class="href">Work Experiences</a>
             <a href="#skills" class="href">Skills</a>
@@ -76,7 +76,7 @@
                     
                 </div>
                
-                <a href="/Files/Arwin-Viernes-CV.pdf" class="btn" download="Viernes-Arwin-CV">Download CV</a>
+                <a href="/Files/ArwinViernes-CV.pdf" class="btn" download="Viernes-Arwin-CV">Download CV</a>
         </div>
     </section>
 
@@ -325,6 +325,17 @@
     document.getElementById('sidebarToggle').addEventListener('click', function(){
         sidebar.style.transform = 'translateX(0%)';
     });
+    </script>
+
+    <script>
+        ['Home', 'Education', 'Experiences', 'contacts', 'skills'].forEach(id => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.addEventListener('click', function() {
+                    sidebar.style.transform = 'translateX(-100%)';
+                });
+            }
+        });
     </script>
 
 
