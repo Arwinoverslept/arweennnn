@@ -424,7 +424,7 @@ span{
 }
 
 
-/*Educaiton*/
+/*Education*/
 .Education{
     background: var(--second-bg-color);
 }
@@ -455,7 +455,7 @@ span{
     background-color: inherit;
     width: 50%;
 }
-/* dito ka mag edit bobo */
+
 .Education .container::after{
     content: '';
     position: absolute;
@@ -833,7 +833,6 @@ nav ul li a:hover {
 /* Media Query */
 
 @media (max-width:640px) {
-    
     body{
         background: var(--bg-color); 
         font-family: 'Poppins',sans-serif;
@@ -936,18 +935,52 @@ nav ul li a:hover {
         padding: 25px;
         padding-top: 10px;
         padding-bottom: 10px;
+        margin-left: 15px;
     }
 
 
-    .Education{
-        padding: 50px;
-    }
-
+    /*Education*/
     .content{
-        width: 10px;
+        width: 100%;
+    }
+
+    .container.right .content .tag{
+        padding: 10px;
+    }
+
+    .container.right .content .tag h3{
+        font-size: 15px;
+    }
+
+    .container.right .content .desc p{
+        font-size: 10px;
+    }
+
+    .container.left .content .tag{
+        padding: 10px;
+    }
+
+    .container.left .content .tag h3{
+        font-size: 15px;
+    }
+
+    .container.left .content .desc p{
+        font-size: 10px;
     }
 
 
+    
+
+    /*Skills*/
+    
+
+    .skills .container .row{
+        display: table-column;
+        grid-template-columns: repeat(1, 2fr);
+        flex-wrap: wrap;
+        gap: 1.8rem;
+    
+    }
 
 }
 
