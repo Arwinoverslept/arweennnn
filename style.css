@@ -523,7 +523,7 @@ span{
 .Education .content .tag{
     font-size: 1.3rem;
     padding-top: 1.5rem;
-    padding-left: 1.5rem;
+    padding-left: 1rem;
 }
 
 .Education .content .desc{
@@ -532,15 +532,21 @@ span{
 }
 
 .Education .content .tag h3{
-    font-weight: 600;
+    font-weight: 700;
     font-size: 2.5rem;
     color: #000000;
+
 }
 
 .Education .content .desc p{
     font-size: 1.3rem;
-    font-weight: 500;
     color: #D3D3D3;
+}
+
+
+.Education .container.right .content .desc .degree{
+    font-size: 1.5rem;
+    font-weight: 800;
 }
 
 
@@ -633,6 +639,7 @@ span{
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   }
+
 
 .footer{
     position: relative;
@@ -878,7 +885,7 @@ nav ul li a:hover {
     }
 
     .home-img img{
-        /* position: relative; */
+        position: relative;
         width: ;
         border-radius: 80%;
         box-shadow: 0 0 50px var(--main-color);
@@ -940,8 +947,17 @@ nav ul li a:hover {
 
 
     /*Education*/
+    #Education{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
     .content{
         width: 100%;
+    }
+
+    .container.right{
+        padding-right: 0;
     }
 
     .container.right .content .tag{
@@ -954,6 +970,7 @@ nav ul li a:hover {
 
     .container.right .content .desc p{
         font-size: 10px;
+        padding-right: 10px;
     }
 
     .container.left .content .tag{
@@ -966,109 +983,130 @@ nav ul li a:hover {
 
     .container.left .content .desc p{
         font-size: 10px;
+        padding-right: 10px;
+    }
+
+    .container.left{
+        padding-left: 0;
+    }
+
+    /*Experiences*/   
+    #Experiences{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .Experiences .Exp-container .ExpBox {
+        padding: 30px;
+    }
+
+    .Experiences .Exp-container .ExpBox .ExpInfo{
+        padding: 10px;
+    }
+
+    .Experiences .Exp-container .ExpBox .ExpInfo h4{
+        font-size: 25px;
+    }
+
+    .Experiences .Exp-container .ExpBox .ExpInfo h5{
+        font-size: 20px;
+    }
+
+    .Experiences .Exp-container .ExpBox .ExpInfo p{
+        font-size: 10px;
     }
 
 
-    
-
     /*Skills*/
-    
 
-    .skills .container .row{
-        display: table-column;
-        grid-template-columns: repeat(1, 2fr);
+    #skills{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .skills .container.bar.info{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+     }
+
+     .skills .container .row{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         flex-wrap: wrap;
         gap: 1.8rem;
     
     }
 
-}
-
-/* @media screen and (max-width:600px){
-    .Education h2,
-    .Experiences h2,
-    .skills h2,
-    .Contacts h2
-    {
-        font-size: 50px;
-        text-align: center;
-    }
-    
-    .Education .timeline{
-        margin-top: 2rem;
-    }
-
-    .Education .timeline::after{
-        left: 31px;
-    }
-
-    .Education .container{
+    .skills .container{
+        margin: 0;
         width: 100%;
-        padding-left: 8rem;
-        padding-right: 2rem;
     }
+
+    /*Contacts*/
+
+    #contacts{
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 20px;
+        margin: 0;
+    }  
     
-    .Education .container::after{
-        font-size: 2.2rem;
+    #contactForm{
+        margin: 0;
     }
 
-    .Education .container::before{
-        left: 61px;
-        border: medium solid var(--main-color);
-        border-width: 10px 10px 10px 0;
-        border-color: transparent var(--main-color) transparent transparent;
-    }
-    .Education .left::after{
-        left: 15px;
+    /*Footer*/
+
+    .footer{
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 20px;
+        padding-bottom: 0;
+    }  
+
+    .footer .social{
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 0;
+    } 
+
+    .footer .Copyright{
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 10px;
+        margin-top: 25px;
+
+    }  
+
+
+    .pop{
+        width: 400px;
+        background: whitesmoke;
+        border-radius: 6px;
+        left: 50%;
+        transform: translate(40%, -1000%) scale(0.1);
+        text-align: center;
+        padding: 0 30px 30px;
+        color: #333; 
+        visibility: hidden;
+        transition: transform 0.4s, top 0.4s;
+     }
+     
+     .open-pop{
+         visibility: visible;
+         top: 50%;
+         transform: translate(20%,-130%) scale(1);
+         display: center;
+        
+       }
+
+
+    /*trippings*/
+    #skills{
+        visibility: hidden;
     }
 
-    .Education .right::after{
-        left: 15px;
-    }
-
-    .Education .right{
-        left: 0%;
-    }
 }
-@media(max-width:1000px){
-    .home{
-        gap: 4rem;
-    }
-}
-
-@media(max-width:995px){
-    .home{
-        flex-direction: column;
-        margin: 5rem 4rem;
-    }
-    .home .home-content h3{
-        font-size: 2.5rem;
-    }
-    .home-content h1{
-        font-size: 5rem;
-    }
-    .home-img img{
-        width: 70vw;
-        margin-top: 4rem;
-    }
-}
-
-
-@media (max-width:991px) {
-    section{
-       padding: 10rem 3% 2rem;
-    }
-    .Experiences{
-        padding-bottom: 7rem;
-    }
-}
-
-
-@media (max-width:895px) {
-    .Experiences h2{
-        margin-bottom: 3rem;
-    }
-    .Exp-container{
-        grid-template-columns: repeat(1,1fr);
-    }
-} */

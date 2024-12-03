@@ -86,12 +86,16 @@
                 
                 <div class="container right">
                     <div class="content">
+
                         <div class="tag">
-                            <h3>University : Mariano Marcos State University</h3>
+                            <h3>Mariano Marcos State University</h3>
                         </div>
+
                         <div class="desc">
                             <p>Earned a Bachelor of Science in Computer Engineering in 2022.</p>
-                        </div>    
+                            <p>Thesis: Smart Mushroom Cultivation with Monitoring System using Android Application</p>
+                        </div>  
+
                     </div>
                 </div>
                 
@@ -112,7 +116,8 @@
                             <h3>Accenture Inc</h3>
                         </div>
                     <div class="desc">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, tempora vitae enim rerum nisi odit, quam et corrupti consectetur veniam dolor ipsa accusamus? Laudantium molestiae blanditiis illum dolores perferendis! Veritatis.</p>
+                        <p>Employment Duration: January 2023 - Decemeber 2023</p>
+                        <p>Employment Type: Full Time</p>
                     </div>    
                     </div>
                 </div>
@@ -123,7 +128,8 @@
                             <h3>WeSupport Inc. - PSBank</h3>
                         </div>
                     <div class="desc">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, tempora vitae enim rerum nisi odit, quam et corrupti consectetur veniam dolor ipsa accusamus? Laudantium molestiae blanditiis illum dolores perferendis! Veritatis.</p>
+                        <p>Employment Duration: February 2024 - June 2024</p>
+                        <p>Employment Type: Contractual</p>
                     </div>    
                     </div>
                 </div>
@@ -134,7 +140,8 @@
                             <h3>Asianlink.ai</h3>
                         </div>
                     <div class="desc">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, tempora vitae enim rerum nisi odit, quam et corrupti consectetur veniam dolor ipsa accusamus? Laudantium molestiae blanditiis illum dolores perferendis! Veritatis.</p>
+                        <p>Employment Duration: June 2024 - Present</p>
+                        <p>Employment Type: Full Time</p>
                     </div>    
                     </div>
                 </div>
@@ -248,25 +255,24 @@
         <h2 class="heading ">Contact <span>Me</span></h2>
 
         <form id="contactForm" action="">
-            <div class="input-box">
-                <input type="text" id="name" name="name" placeholder="Name of your Company or Your Name" required>
-                <input type="email" id="email" name="email" placeholder="Email Address" required>
-                <input type="number" id="number" name="number" placeholder="Phone Number" required>
-                <input type="text" id="Subject" name="Subject" placeholder="Subject" required>
-            </div>
+                <div class="input-box">
+                    <input type="text" id="name" name="name" placeholder="Name of your Company or Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                    <input type="number" id="number" name="number" placeholder="Phone Number" required>
+                    <input type="text" id="Subject" name="Subject" placeholder="Subject" required>
+                </div>
             <textarea name="message" id="message" placeholder="Job Description / Message ..."></textarea>
             <button id="submit" type="submit" value="Send Message" class="btn" onclick="openPopup()">Send Message</button>
+            
             <div class="pop" id="pop">
                 <img src="/potos/404-tick.png">
-                <h2>Thank You!</h2>
-                <p>Your details have been successfully sent!</p>
-                <button type="OK" onclick="closePopup()">OK</button>
+                    <h2>Thank You!</h2>
+                    <p>Your details have been successfully sent!</p>
+                    <button type="OK" onclick="closePopup()">OK</button>
             </div>
         </form>
 
     </section>
-
-    
 
     <footer class="footer">
         <div class="social">
@@ -279,66 +285,6 @@
     </footer>
 </body>
 
-    <script>
-        let Popup = document.getElementById("pop");
-        function openPopup(){
-            Popup.classList.add("open-pop");
-
-        }
-        function closePopup(){
-            Popup.classList.remove("open-pop");
-            
-        }   
-    </script>
-
-    <script>
-            document.getElementById('contactForm').addEventListener('submit', function(event) {
-                event.preventDefault(); 
-
-                const serviceID = 'service_i6xlkud';
-                const templateID = 'template_8arq9qi';
-                
-                const templateParams = {
-                    name: document.getElementById('name').value,
-                    email: document.getElementById('email').value,
-                    number: document.getElementById('number').value,
-                    Subject: document.getElementById('Subject').value,
-                    message: document.getElementById('message').value,
-                };
-
-                emailjs.send(serviceID, templateID, templateParams)
-                    .then((response) => {
-                        document.getElementById('contactForm').reset();
-                    }, (error) => {
-                        console.log('Failed to send email', error);
-                    });
-            });
-    </script>
-
-    <script>
-    document.getElementById('Close').addEventListener('click', function(){
-        sidebar.style.transform = 'translateX(-100%)';
-    });
-    </script>
-
-    <script>
-    document.getElementById('sidebarToggle').addEventListener('click', function(){
-        sidebar.style.transform = 'translateX(0%)';
-    });
-    </script>
-
-    <script>
-        ['Home', 'Education', 'Experiences', 'contacts', 'skills'].forEach(id => {
-            const element = document.getElementById(id);
-            if (element) {
-                element.addEventListener('click', function() {
-                    sidebar.style.transform = 'translateX(-100%)';
-                });
-            }
-        });
-    </script>
-
-
-
+    <script src="index.js"></script>
 
 </html>
