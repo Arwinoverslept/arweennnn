@@ -385,6 +385,7 @@ span{
     padding: 2rem;
     width: 70%;
     margin: auto;
+   
     margin-top: 2rem;
 }
 
@@ -543,19 +544,17 @@ span{
     color: #D3D3D3;
 }
 
-
-.Education .container.right .content .desc .degree{
-    font-size: 1.5rem;
-    font-weight: 800;
+.Education .container.right .content .desc grad{
+    font-size: 15px;
+    font-weight: 400;
 }
 
 
 /*Contacts*/
 .Contacts{
     padding: 106px;
-    margin: 3rem;
     color: white;
-    
+
 }
 
 .Contacts .contacts{
@@ -645,13 +644,14 @@ span{
     position: relative;
     bottom: 0;
     width: 100%;
-    padding: 40px 0;
+    padding-top: 40px;
+    padding-bottom: 20px;
     background-color: var(--main-color);
 }
 
 .footer .social{
     text-align: center;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
     color: black;
 }
 
@@ -691,7 +691,7 @@ span{
 }
 
 .footer .Copyright{
-    margin-top: 50px;
+    margin-top: 20px;
     text-align: center;
     font-size: 16px;
     color: black;
