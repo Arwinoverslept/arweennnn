@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
@@ -8,19 +11,52 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript"> emailjs.init("2V7UKXvFCgk1dUjHT"); </script>
+    <script>src="https://kit.fontawesome.com/a076d05399.js"</script>
 </head>
+
 <body>
     <header class="header">
+        
+        <button id="sidebarToggle" aria-controls="default-sidebar" type="button">
+            <span class="visually-hidden">Toggle sidebar</span>
+            <svg class="icon" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+            </svg>
+         </button>
 
-        <a href="#" class="logo">@Arwinoverslept</a>
-        <i class="fa-solid fa-bars" class ='MenuIcon'></i>
+        <!-- <a href="#Home" class="logo">@Arwinoverslept</a> -->
+
+       
+
+        <div id="sidebar" class="sidebar hidden">
+            
+            <button id="Close" class="fa-solid fa-angles-left"></button>
+            
+            <div class="brand">
+                <a href="#Home" aria-label="Brand">My Portfolio</a>
+            </div>
+            <nav class="sideLabel">
+                <ul>
+                    <li><a href="#Home" class="href">Home</a></li>
+                    <li><a href="#Education" class="href">Education</a></li>
+                    <li><a href="#Experiences" class="href">Work Experiences</a></li>
+                    <li><a href="#skills" class="href">Skills</a></li>
+                    <li><a href="#contacts" class="href">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
         
         <nav class="navbar">
-            <a href="#Home" class="href">Home</a>
+            
+            <a href="#Home" class="href" >Home</a>
             <a href="#Education" class="href">Education</a>
             <a href="#Experiences" class="href">Work Experiences</a>
-            <a href="#Contacts" class="href">Contacts</a>
-        </nav>
+            <a href="#skills" class="href">Skills</a>
+            <a href="#contacts" class="href">Contact Me</a>
+
+        </nav> 
     </header>  
 
     <section class="home" id="Home">
@@ -32,47 +68,223 @@
             <h3 class="Typing-Text">I'm a <span></span></h3>
             <p> Detail-oriented and results-driven Associate Software Engineer with a strong focus on Quality Assurance. Expertise in developing comprehensive test plans, identifying defects, and enhancing overall software quality. Proficient in both manual and automated testing methodologies, ensuring the delivery of high-quality software solutions<p>
                 <div class="social-icon">
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#"><i class="fa-brands fa-google"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/arwin-viernes-9a8431230/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZXhnVSFgQhDljgxkWkCQrhtbWJmVJRjtRJdmcksvKdqjCpFxsMGghqtVZGxJBwglrwHSV"><i class="fa-brands fa-google"></i></a>
+                    <a href="https://www.facebook.com/ArwinTheGreatAndPowerful/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/arwinoverslept/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/Arwinoverslept"><i class="fa-brands fa-github"></i></a>
+                    
                 </div>
-                <a href="#" class="btn">Hire Me</a>
+               
+                <a href="/Files/ArwinViernes-CV.pdf" class="btn" download="Viernes-Arwin-CV">Download CV</a>
         </div>
     </section>
 
     <section class="Education" id="Education">
-        <h2 class="heading ">Education</h2>
+        <h2 class="heading ">My <span>Education</span></h2>
+            <div class="timeline">
+                
+                <div class="container right">
+                    <div class="content">
 
+                        <div class="tag">
+                            <h3>Mariano Marcos State University</h3>
+                        </div>
+
+                        <div class="desc">
+                            <p>Earned a Bachelor of Science in Computer Engineering in 2022.</p>
+                            <p>Thesis: Smart Mushroom Cultivation with Monitoring System using Android Application</p>
+                        </div>  
+
+                    </div>
+                </div>
+                
+                <div class="container left">
+                    <div class="content">
+                        <div class="tag">
+                            <h3>Internship - PLDT</h3>
+                        </div>
+                        <div class="desc">
+                            <p>During my OJT at PLDT, I gained hands-on experience in installing FIBR lines, troubleshooting and repairing internet connectivity, and setting up mesh networks to optimize Wi-Fi coverage. This experience enhanced my technical skills and problem-solving abilities in the telecommunications field.</p>
+                        </div>    
+                    </div>
+                </div>
+                
+                <div class="container right">
+                    <div class="content">
+                        <div class="tag">
+                            <h3>Accenture Inc</h3>
+                        </div>
+                    <div class="desc">
+                        <p>Employment Duration: January 2023 - Decemeber 2023</p>
+                        <p>Employment Type: Full Time</p>
+                    </div>    
+                    </div>
+                </div>
+                
+                <div class="container left">
+                    <div class="content">
+                        <div class="tag">
+                            <h3>WeSupport Inc. - PSBank</h3>
+                        </div>
+                    <div class="desc">
+                        <p>Employment Duration: February 2024 - June 2024</p>
+                        <p>Employment Type: Contractual</p>
+                    </div>    
+                    </div>
+                </div>
+
+                <div class="container right">
+                    <div class="content">
+                        <div class="tag">
+                            <h3>Asianlink.ai</h3>
+                        </div>
+                    <div class="desc">
+                        <p>Employment Duration: June 2024 - Present</p>
+                        <p>Employment Type: Full Time</p>
+                    </div>    
+                    </div>
+                </div>
+                
+            </div>
         <div class="Education-Background"></div>
     </section>
 
     <section class="Experiences" id="Experiences">
-        <h2 class="heading ">Work Experiences</h2>
+        <h2 class="heading ">Work <span>Experiences</span></h2>
+        <div class="Exp-container">
+            <div class="ExpBox">
+                <div class="ExpInfo">
+                    <h4>Quality Assurance Engineer</h4>
+                    <h5>Accenture Inc.</h5>
+                    <p>I developed and executed comprehensive test plans, test cases, and test scripts based on the project requirements. This involved performing manual testing to identify defects and ensure that all aspects of the software met the specified requirements. Additionally, I utilized Selenium for automation testing on selected test scenarios to confirm that the software aligned with the client's needs and discussed the testing outcomes directly with the client. I also documented test scripts, procedures, and results for future reference and knowledge sharing. Furthermore, I created test scenarios and data sets to simulate real-world usage scenarios and edge cases, ensuring thorough validation of the software.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="Exp-container">
+            <div class="ExpBox">
+                <div class="ExpInfo">
+                    <h4>System Support Analyst</h4>
+                    <h5>We Support Inc. – PSBank</h5>
+                    <p>I provided technical assistance and support for incoming queries and issues related to banking transaction problems, 
+                        computer systems and software issues. Additionally, I collaborated with other IT team members to resolve complex technical issues and escalated problems when necessary to ensure efficient resolution.</p>
+                </div>
+            </div>
+        </div>
 
         <div class="Exp-container">
             <div class="ExpBox">
                 <div class="ExpInfo">
                     <h4>Quality Assurance Engineer</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, est ea laboriosam necessitatibus voluptatem voluptatibus vitae sunt cumque officiis in!</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="Exp-container">
-            <div class="ExpBox">
-                <div class="ExpInfo">
-                    <h4>System Support</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, est ea laboriosam necessitatibus voluptatem voluptatibus vitae sunt cumque officiis in!</p>
+                    <h5>Asianlink.ai</h5>
+                    <p>I have focused on creating an end-to-end test script for the Asianlink.ai application, ensuring comprehensive functionality and user experience. I also developed detailed bug reports, summarizing the issues encountered during testing, and engaged in discussions with the development team to provide insights on how these bugs were identified and their potential impact. Additionally, I dedicated time to studying HTML, CSS and JavaScript to enhance my web development skills and contribute more effectively to the project.</p>                    
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="Contacts" id="Contacts">
-        <h2 class="heading ">Contacts</h2>
+    <section class="skills" id="skills">
+        <h2 class="heading ">Ski<span>lls</span></h2>
+        <div class="container">
+            <div class="row" id="skillsContainer">
+            
+                <div class="bar">
+                    <div class="info">
+                        <img src="">
+                        <span>Java Programming</span>
+                    </div>
+                </div>
+                
+                <div class="bar">
+                    <div class="info">
+                        <img src="">
+                        <span>Selenium</span>
+                    </div>
+                </div>
+
+                <div class="bar">
+                    <div class="info">
+                        <img src="">
+                        <span>Tricentris Tosca</span>
+                    </div>
+                </div>
+
+                <div class="bar">
+                    <div class="info">
+                        <img src="">
+                        <span>HTML</span>
+                    </div>
+                </div>
+
+
+                <div class="bar">
+                    <div class="info">
+                        <img src="">
+                        <span>CSS</span>
+                    </div>
+                </div>
+
+                <div class="bar">
+                    <div class="info">
+                        <img src="">
+                        <span>mySQL</span>
+                    </div>
+                </div>
+
+                <div class="bar">
+                    <div class="info">
+                        <img src="">
+                        <span>C</span>
+                    </div>
+                </div>
+
+                <div class="bar">
+                    <div class="info">
+                        <img src="">     
+                        <span>Arduino</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>  
+
+    <section class="Contacts" id="contacts">
+
+        <h2 class="heading ">Contact <span>Me</span></h2>
+
+        <form id="contactForm" action="">
+                <div class="input-box">
+                    <input type="text" id="name" name="name" placeholder="Name of your Company or Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                    <input type="number" id="number" name="number" placeholder="Phone Number" required>
+                    <input type="text" id="Subject" name="Subject" placeholder="Subject" required>
+                </div>
+            <textarea name="message" id="message" placeholder="Job Description / Message ..."></textarea>
+            <button id="submit" type="submit" value="Send Message" class="btn" onclick="openPopup()">Send Message</button>
+            
+            <div class="pop" id="pop">
+                <img src="/potos/404-tick.png">
+                    <h2>Thank You!</h2>
+                    <p>Your details have been successfully sent!</p>
+                    <button type="OK" onclick="closePopup()">OK</button>
+            </div>
+        </form>
+
     </section>
-        
-    <script src="/assests/js/script.js"></script>
+
+    <footer class="footer">
+        <div class="social">
+            <a href="https://www.linkedin.com/in/arwin-viernes-9a8431230/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/ArwinTheGreatAndPowerful/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/arwinoverslept/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/Arwinoverslept"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <p class="Copyright">Arwin B. Viernes || All Rights Reserved.</p>
+    </footer>
 </body>
+
+    <script src="index.js"></script>
+
 </html>
