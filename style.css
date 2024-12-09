@@ -53,10 +53,6 @@ label #drawer{
     display: none;
 }
 
-#check{
-    display: none;
-}
-
 .header{
     position:fixed;
     top: 0;
@@ -106,7 +102,6 @@ label #drawer{
     transition: 0.3s;
 }
 
-
 #MenuIcon{
     font-size: 3.6rem;
     color: var(--main-color);
@@ -142,6 +137,12 @@ span{
     margin-bottom: 1rem;
     font-weight: 700;
 }
+
+.home .home-content .downloadCV{
+    padding-bottom: 50px;
+}
+
+
 
 .home-content h3{
     font-size: 4rem;
@@ -217,6 +218,7 @@ span{
     letter-spacing: 0.1rem;
     font-weight: 700;
     cursor: pointer;
+    
 }
 
 .btn:hover{ 
@@ -242,7 +244,7 @@ span{
     animation: words 20s infinite;
 }
 
-.Typing-Text span::after{
+/* .Typing-Text span::after{
     content: '';
     color: var(--bg-color);
     position: absolute;
@@ -251,7 +253,7 @@ span{
     border-left: 3px solid var(--bg-color);
     right: -8;
     animation: typing 4s steps(22, end), blink 0.7s step-end infinite;
-}
+} */
 
 @keyframes cursor{
     to{
@@ -349,21 +351,15 @@ span{
 
 .ExpInfo h5{
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 5px;
 }
 
 .ExpInfo p{
     font-size: 1.6rem;
-    font-weight: 400;
+    font-weight: 300;
     max-height: 100px;
     text-align: left;
-}
-
-.ExpInfo b{
-    font-size: 1.3rem;
-    font-weight: 500;
-    padding-top: 20px;
 }
 
 .Experiences h2{
@@ -385,7 +381,6 @@ span{
     padding: 2rem;
     width: 70%;
     margin: auto;
-   
     margin-top: 2rem;
 }
 
@@ -838,14 +833,29 @@ nav ul li a:hover {
 
 
 /* Media Query */
-
-@media (max-width:640px) {
+@media (min-width:834px) {
     body{
         background: var(--bg-color); 
         font-family: 'Poppins',sans-serif;
         color: var(--text-color);
         width: 100%;
     }
+
+
+    .header{
+        position:fixed;
+        top: 0;
+        left: 0;
+        width: relative;
+        padding-left: 50px;
+        padding-right: 50px;
+        background:rgba(0,0,0,0.7);
+        filter: drop-shadow(10px);
+        display: flex;
+        align-items: center;
+        z-index: 100;
+    }
+
 
     .Education h2,
     .Experiences h2,
@@ -875,18 +885,13 @@ nav ul li a:hover {
         padding: 30px;
     }
 
-    #Home{
-        gap: 4rem;
-        padding: 50px;
-    }
-
     .navbar{
         visibility: hidden;
     }
 
     .home-img img{
         position: relative;
-        width: ;
+        width: relative;
         border-radius: 80%;
         box-shadow: 0 0 50px var(--main-color);
     }
@@ -897,6 +902,7 @@ nav ul li a:hover {
     
     #sidebarToggle{
         visibility: visible;
+        margin: 0px;
     }
 
     .navbar{
@@ -946,14 +952,14 @@ nav ul li a:hover {
     }
 
 
-    /*Education*/
+
     #Education{
         padding-left: 50px;
         padding-right: 50px;
     }
 
     .content{
-        width: 100%;
+        width: relative;
     }
 
     .container.right{
@@ -961,28 +967,35 @@ nav ul li a:hover {
     }
 
     .container.right .content .tag{
-        padding: 10px;
+        padding: 5px;
     }
 
     .container.right .content .tag h3{
-        font-size: 15px;
+        padding-left: 5px;
+        font-size: 20px;
     }
 
     .container.right .content .desc p{
-        font-size: 10px;
+        font-size: 12px;
+        padding-right: 10px;
+    }
+
+    .Education .container.right .content .desc grad{
+        font-size: 15px;
         padding-right: 10px;
     }
 
     .container.left .content .tag{
-        padding: 10px;
+        padding-left: 10px;
+        padding-bottom: 5px;
     }
 
     .container.left .content .tag h3{
-        font-size: 15px;
+        font-size: 20px;
     }
 
     .container.left .content .desc p{
-        font-size: 10px;
+        font-size: 12px;
         padding-right: 10px;
     }
 
@@ -990,7 +1003,7 @@ nav ul li a:hover {
         padding-left: 0;
     }
 
-    /*Experiences*/   
+
     #Experiences{
         padding-left: 50px;
         padding-right: 50px;
@@ -998,14 +1011,18 @@ nav ul li a:hover {
 
     .Experiences .Exp-container .ExpBox {
         padding: 30px;
+        height: 330px;
+        width: relative;
     }
 
     .Experiences .Exp-container .ExpBox .ExpInfo{
-        padding: 10px;
+        padding: 0px;
     }
 
     .Experiences .Exp-container .ExpBox .ExpInfo h4{
         font-size: 25px;
+        text-align: center;
+       
     }
 
     .Experiences .Exp-container .ExpBox .ExpInfo h5{
@@ -1013,11 +1030,11 @@ nav ul li a:hover {
     }
 
     .Experiences .Exp-container .ExpBox .ExpInfo p{
-        font-size: 10px;
+        
+        font-size: 13px;
     }
 
 
-    /*Skills*/
 
     #skills{
         padding-left: 50px;
@@ -1045,9 +1062,8 @@ nav ul li a:hover {
         width: 100%;
     }
 
-    /*Contacts*/
 
-    #contacts{
+    /* #contacts{
         padding-left: 50px;
         padding-right: 50px;
         padding-bottom: 20px;
@@ -1056,9 +1072,8 @@ nav ul li a:hover {
     
     #contactForm{
         margin: 0;
-    }
+    } */
 
-    /*Footer*/
 
     .footer{
         padding-left: 50px;
@@ -1104,3 +1119,78 @@ nav ul li a:hover {
        }
 
 }
+
+@media (min-width:1195px) {
+    body{
+        background: var(--bg-color); 
+        font-family: 'Poppins',sans-serif;
+        color: var(--text-color);
+        width: relative;
+    }
+
+    .home h1{
+        font-size: 50px;
+    }
+
+    .home p{
+        font-size: 20px;
+    }
+
+    .social-icon a{
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .Education .timeline .container.right .content .tag h3{
+        font-size:25px;
+    }
+
+    .Education .timeline .container.right .content .desc grad{
+        font-size:20px;
+    }
+
+    .Education .timeline .container.right .content .desc p{
+        font-size: 15px;
+    }
+
+    .Education .timeline .container.left .content .tag h3{
+        font-size:25px;
+    }   
+
+    .Education .timeline .container.left .content .desc p{
+        font-size: 15px;
+    }
+
+    .Experiences .Exp-container .ExpBox .ExpInfo{
+        height: relative;
+        width: relative;
+    }
+
+
+    .Experiences .Exp-container .ExpBox .ExpInfo h4{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .Experiences .Exp-container .ExpBox .ExpInfo h5{
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .Experiences .Exp-container .ExpBox .ExpInfo p{
+        font-size: 15px;
+        text-align: justify;
+    }
+
+
+    /* .Contacts form .input-box input,
+    .Contacts form textarea{
+        padding-left: 70px;
+        width: 100%;
+        align-items: center;
+        padding: 1.5rem;
+        
+    } */
+
+}
+
