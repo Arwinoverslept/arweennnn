@@ -87,6 +87,7 @@ label #drawer{
 .navbar{
     padding-right: 50px;
 }
+
 .navbar a{
     font-size: 1.8rem;
     color: var(--text-color);
@@ -1191,6 +1192,16 @@ nav ul li a:hover {
         padding: 1.5rem;
         
     } */
+
+    .navbar a{
+        visibility: visible;
+        font-size: 1.8rem;
+    }
+
+    #sidebarToggle{
+        visibility: hidden;
+    }
+    
 
 }
 
